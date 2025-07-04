@@ -136,11 +136,6 @@ fun_check_code() {
   #   OUTPUT_SUFFIX=${OUTPUT_SUFFIX}-wax
   #   echo 64-Complete patch wax!
   # fi
-  if [ $((MOD_CODE & 128)) -ne 0 ]; then
-    echo 128-Start patch susato...
-    OUTPUT_SUFFIX=${OUTPUT_SUFFIX}-susato
-    echo 128-Complete patch susato!
-  fi
   if [ $((MOD_CODE & 2)) -ne 0 ]; then
     echo 2-Start patch cheat...
     # fun_cheat
@@ -350,12 +345,6 @@ if [[ ${MOD_CODE} = polyfill-* ]]; then
   FILE_NAME=$(basename DoL*polyfill-6.$VERSION)
   IS_POLYFILL=1
   MOD_CODE=$(echo $MOD_CODE | cut -d '-' -f 2)
-elif [ $MOD_CODE -eq 134 ]; then
-  echo 134-Use susato cheat csd
-  FILE_NAME=$(basename DoL*-134.$VERSION)
-elif [ $MOD_CODE -eq 132 ]; then
-  echo 132-Use susato csd
-  FILE_NAME=$(basename DoL*-132.$VERSION)
 elif [ $((MOD_CODE & 6)) -eq 6 ]; then
   echo 6-Use cheat csd base
   FILE_NAME=$(basename DoL*[^polyfill]-6.$VERSION)
