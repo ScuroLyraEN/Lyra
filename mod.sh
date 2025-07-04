@@ -355,7 +355,7 @@ elif [ $((MOD_CODE & 2)) -eq 2 ]; then
   echo 2-Use cheat base
   FILE_NAME=$(basename DoL*-2.$VERSION)
 else
-  echo 0-Use i18n only
+  echo 0-Use base only
   FILE_NAME=$(basename DoL*-0.$VERSION)
 fi
 
